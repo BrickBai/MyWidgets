@@ -1,0 +1,11 @@
+.Home-row {
+    text-align: center;
+}
+  
+.Home-header {
+    text-align: center;
+    background-color: #222;
+    height: 100px;
+    padding: 20px;
+    color: white;
+}
