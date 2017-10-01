@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
-import IdeasContainer from '../IdeasContainer'
+import IdeasContainer from '../IdeaBoard/IdeasContainer'
 import Clock from '../Clock';
 
 class Home extends Component {

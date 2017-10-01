@@ -17,20 +17,16 @@ class IdeasContainer extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/api/v1/ideas.json')
-    .then(response => {
-      this.setState({ideas: response.data})
-    })
-    .catch(error => console.log(error))
+    // axios.get('http://localhost:3001/api/v1/ideas.json')
+    // .then(response => {
+    //   this.setState({ideas: response.data})
+    // })
+    // .catch(error => console.log(error))
   }
 
   addNewIdea = () => {
-    axios.post('http://localhost:3001/api/v1/ideas', {idea: {title: '', body: ''}})
-    .then(response => {
-      const ideas = update(this.state.ideas, { $splice: [[0, 0, response.data]]})
-      this.setState({ideas: ideas, editingIdeaId: response.data.id})
-    })
-    .catch(error => console.log(error))
+    const ideas = update(this.state.ideas, { $splice: [[0, 0, {idea: {title: '', body: ''}}]]})
+    this.setState({ideas: ideas})
   }
 
   updateIdea = (idea) => {
